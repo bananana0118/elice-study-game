@@ -43,7 +43,7 @@
               <button class="btn_start" id="btnStart">start!</button>
               <script>
                 const btnStart = document.querySelector("#btnStart");
-                btnStart.addEventListener("click", () => {
+                btnStart.addEventListener("click", (e) => {
                   const notice = document.querySelector("#modal_notice");
                   notice.style.display = "none";
                   playRSP();
@@ -65,8 +65,14 @@
                 });
               </script>
             </div>
+
             <div id="container"></div>
           </div>
+<!-- 게임화면 -->
+          <div id="pokemon">
+            <!-- 3판 2선승제 버튼 만들기-->
+            <div id="scoreBoard">
+              
           <button class="btn-open-popup">포켓몬 도감보기</button>
           <script>
             const modal = document.querySelector(".modal");
@@ -77,12 +83,7 @@
             });
           </script>
 
-
-          <div id="pokemon">
-            <!-- 3판 2선승제 버튼 만들기-->
-            <div id="scoreBoard">
-              <span id="life">○○●</span>
-              <span id="score">Score : </span>
+              <span id="score">[151 / 0]</span>
             </div>
             <div id="comPanel">
               <div class="name_wrapper">
@@ -111,7 +112,7 @@
                 class="btn_image"
                 id="img-btn"
 
-                onClick="playRSP()"
+                onclick="playRSP()"
               >
                 <img src="../img/paper.gif" value="paper" />
     </button>
@@ -123,7 +124,7 @@
                 class="btn_image"
                 id="img-btn"
 
-                onClick="playRSP()"
+                onclick="playRSP()"
               >
                 <img src="../img/rock.gif" value="rock" />
 
@@ -137,7 +138,7 @@
                 class="btn_image"
                 id="img-btn"
 
-                onClick="playRSP()"
+                onclick="playRSP()"
               >
                 <img src="../img/scissors.gif" value="scissors" />
               </button>
